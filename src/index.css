@@ -1,0 +1,95 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 15 32 39; /* #0f2027 */
+    --foreground: 245 245 245; /* #F5F5F5 */
+
+    --card: 28 28 28; /* #1c1c1c */
+    --card-foreground: 245 245 245; /* #F5F5F5 */
+
+    --popover: 28 28 28; /* #1c1c1c */
+    --popover-foreground: 245 245 245; /* #F5F5F5 */
+
+    --primary: 0 174 239; /* #00AEEF */
+    --primary-foreground: 255 255 255; /* #FFFFFF */
+
+    --secondary: 28 28 28; /* #1c1c1c */
+    --secondary-foreground: 245 245 245; /* #F5F5F5 */
+
+    --muted: 28 28 28; /* #1c1c1c */
+    --muted-foreground: 160 160 160; /* #A0A0A0 */
+
+    --accent: 0 174 239; /* #00AEEF */
+    --accent-foreground: 255 255 255; /* #FFFFFF */
+
+    --destructive: 239 68 68; /* #EF4444 */
+    --destructive-foreground: 245 245 245; /* #F5F5F5 */
+
+    --border: 28 28 28; /* #1c1c1c */
+    --input: 28 28 28; /* #1c1c1c */
+    --ring: 0 174 239; /* #00AEEF */
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-r from-[#0f2027] via-[#203a43] to-[#2c5364] text-white min-h-screen;
+  }
+}
+
+/* Custom gradient classes */
+@layer utilities {
+  .gradient-main {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  }
+  
+  .gradient-card {
+    background: linear-gradient(to right, #1c1c1c, #273c51, #1c1c1c);
+  }
+  
+  .gradient-hero-1 {
+    background: linear-gradient(to bottom right, #1e40af, #000000);
+  }
+  
+  .gradient-hero-2 {
+    background: linear-gradient(to right, #172554, #312e81, #000000);
+  }
+  
+  .text-primary-white {
+    color: #FFFFFF;
+  }
+  
+  .text-secondary-gray {
+    color: #A0A0A0;
+  }
+  
+  .bg-accent-cyan {
+    background-color: #00AEEF;
+  }
+  
+  .bg-accent-cyan-hover {
+    background-color: #008EC2;
+  }
+  
+  .text-accent-cyan {
+    color: #00AEEF;
+  }
+  
+  .border-accent-cyan {
+    border-color: #00AEEF;
+  }
+  
+  .shadow-modern {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
