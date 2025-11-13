@@ -1,4 +1,3 @@
-
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import CursorFollower from '@/components/CursorFollower';
 import ScrollIndicator from '@/components/ScrollIndicator';
@@ -9,6 +8,7 @@ import ServicesSection from '@/components/ServicesSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import ExperienceSection from '@/components/Experience';
 
 const Index = () => {
   return (
@@ -17,9 +17,9 @@ const Index = () => {
         <CursorFollower />
         <ScrollIndicator />
         <Navigation />
-        
         <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <ServicesSection />
         <ProjectsSection />
         <ContactSection />
