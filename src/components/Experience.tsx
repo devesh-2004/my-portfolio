@@ -22,6 +22,15 @@ const ExperienceSection = () => {
       icon: "👟",
       accent: "bg-accent-cyan-hover",
     },
+     {
+      company: "Togeno (Internship)",
+      role: "Frontend Developer",
+      period: "Jan 2026 - Feb 2026",
+      description: "Built a product catalog with smooth animations, and implemented a cart & checkout flow with server-side logic. Collaborated with the backend team to integrate the frontend with the backend.",
+      tech: ["Next.js", "Node.js","Framer-motion"],
+      icon: "👟",
+      accent: "bg-accent-cyan-hover",
+    }
   ];
 
   return (

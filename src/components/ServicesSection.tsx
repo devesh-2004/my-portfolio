@@ -18,6 +18,7 @@ const ServicesSection = () => {
       description:
         "Building responsive, interactive, and scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). I focus on creating efficient architectures, smooth user experiences, and maintainable backend systems.",
       tags: [
+        "javascript",
         "React.js",
         "Node.js",
         "MongoDB",
@@ -33,6 +34,7 @@ const ServicesSection = () => {
       description:
         "Designing modern, performant, and visually appealing user interfaces. I prioritize clean design, responsiveness, and accessibility while maintaining optimal performance and reusability of components.",
       tags: [
+        "javascript",
         "React.js",
         "Next.js",
         "Tailwind CSS",
@@ -46,7 +48,7 @@ const ServicesSection = () => {
       title: "Backend Development & API Design",
       description:
         "Developing secure and scalable server-side applications with RESTful APIs, authentication, and data management systems. Skilled in integrating databases and optimizing backend logic for efficiency.",
-      tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Postman"],
+      tags: ["javascript","Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Postman", "Supabase"],
       bgColor: "bg-accent-cyan",
     },
     {
@@ -54,7 +56,7 @@ const ServicesSection = () => {
       title: "Data Structures & Algorithms Problem Solving",
       description:
         "Actively practicing and implementing advanced problem-solving techniques through LeetCode, GeeksforGeeks, and CodeStudio. Strong focus on improving time complexity, algorithmic logic, and competitive programming fundamentals.",
-      tags: ["C++", "Python", "LeetCode", "GeeksforGeeks", "Problem Solving"],
+      tags: ["C++", "LeetCode", "GeeksforGeeks", "Problem Solving"],
       bgColor: "bg-accent-cyan",
     },
     {
@@ -62,7 +64,7 @@ const ServicesSection = () => {
       title: "Deployment & Cloud Integration",
       description:
         "Deploying and managing full-stack applications on modern cloud platforms with continuous integration and delivery pipelines. Skilled in hosting, version control, and performance optimization.",
-      tags: ["Vercel", "Render", "GitHub", "Netlify", "Firebase", "CI/CD"],
+      tags: ["Vercel", "GitHub", "Netlify", "CI/CD"],
       bgColor: "bg-accent-cyan",
     },
     {
@@ -70,7 +72,7 @@ const ServicesSection = () => {
       title: "Database Design & Management",
       description:
         "Designing efficient database schemas and integrating them seamlessly into web applications. Experienced in both NoSQL (MongoDB) and SQL (MySQL) structures for scalable data management.",
-      tags: ["MongoDB", "MySQL", "Mongoose", "Data Modeling", "Indexing"],
+      tags: ["MongoDB", "Supabase", "Mongoose", "Data Modeling", "Indexing"],
       bgColor: "bg-accent-cyan",
     }
   ];

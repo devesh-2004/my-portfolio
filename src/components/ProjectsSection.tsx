@@ -2,45 +2,47 @@ import { Link } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Real Time Code-Editor",
+      title: "Bill Mate",
       description:
-        "A platform where users can collaborate on code in real-time, with features like syntax highlighting, real-time collaboration, and code sharing.",
+        "A full stack application where users can create, and manage their bills. It also includes features like payment reminders, and payment tracking.",
       tech: [
+        "React.js",
         "Next.js",
         "Node.js",
         "Socket.io",
-        "MongoDB",
+        "Supabase",
         "Framer-motion",
-        "TypeScript",
+        "TypeScript"
       ],
-      image: "✍️",
+      image: "🧾",
       primaryColor: "bg-accent-cyan-hover",
-      ProjectLink: "https://online-store-beryl-phi.vercel.app/", // Placeholder, update as needed
+      ProjectLink: "https://bill-mate-ten.vercel.app/", // Placeholder, update as needed
     },
     {
       title: "Shoe-Store",
       description:
         "A full-stack e-commerce platform for shoes. Features a responsive interface, smooth animations, and product filtering by category, size, and price.",
       tech: ["Next.js", "Node.js", "Framer-motion", "MongoDB"],
-      image: "✌🏻",
+      image: "👟",
       primaryColor: "bg-accent-cyan",
       ProjectLink: "https://online-store-beryl-phi.vercel.app/", // Placeholder, update as needed
     },
     {
-      title: "Personal 'Code Snippet' Manager",
+      title: "AI Project Analyzer",
       description:
-        "A full-stack MERN app for developers. Users can log in (JWT auth) to create, save, categorize, and search their own private code snippets with syntax highlighting.",
+        "A full-stack app that analyzes projects and provides insights. Users can log in (JWT auth) to create, save, categorize, and search their own private projects.",
       tech: [
+        "JavaScript",
         "React.js",
-        "Node.js",
-        "MongoDB",
-        "Express.js",
-        "JWT",
+        "Next.js",
         "Tailwind CSS",
+        "Gemini API",
+        "Vercel",
+        "Lucide React",
       ],
       image: "🗃️",
       primaryColor: "bg-accent-cyan",
-      ProjectLink: "#", // Placeholder, update as needed
+      ProjectLink: "https://project-analyzer-pi.vercel.app/", // Placeholder, update as needed
     }
   ];
 
