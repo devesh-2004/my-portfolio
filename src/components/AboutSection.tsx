@@ -198,18 +198,18 @@ const AboutSection = () => {
                 Engineering Student & Developer
               </h3>
               <p className="mb-3 text-secondary-gray leading-relaxed">
-                I'm a Computer Science engineering student building modern web
-                applications with the MERN stack. I focus on clean UI,
+                I'm a Computer Science engineering undergraduate building modern web
+                applications with the MERN stack. I focus on clean UI, and
                 performant code, and practical, real-world projects.
               </p>
 
               <p className="mb-3 text-secondary-gray leading-relaxed">
-                I enjoy building realtime features (Socket.io/WebSockets),
+                I enjoy building realtime features,
                 optimizing backend services, and deploying apps on Vercel.
               </p>
 
               <p className="text-secondary-gray leading-relaxed">
-                Seeking internships / early roles to contribute and grow with a
+                Seeking internships / full-time roles to contribute and grow with a
                 product-focused team.
               </p>
             </div>
