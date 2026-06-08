@@ -1,121 +1,98 @@
+"use client";
+
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-const Navigation = () => {
-  const [activeSection, setActiveSection] = useState("home");
+
+export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "services", "projects", "contact"];
-      const scrollPosition = window.scrollY + 100;
       setIsScrolled(window.scrollY > 50);
-      sections.forEach((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-          }
-        }
-      });
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setMenuOpen(false); // close mobile menu on click
-    }
-  };
-  const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "experience", label: "Experience" },
-    { id: "services", label: "Services" },
-    { id: "projects", label: "Projects" },
-    { id: "contact", label: "Contact" },
-  ];
 
   return (
-    <nav
-      className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-[90%] md:w-auto ${
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "gradient-card backdrop-blur-md border border-gray-600 shadow-modern"
-          : "bg-black/30 backdrop-blur-md border border-gray-700/50"
-      } rounded-full px-4 py-3 md:px-6 md:py-3`}
+          ? "bg-[#0a0a0c]/80 backdrop-blur-lg border-b border-gray-800 py-4 shadow-lg"
+          : "bg-transparent py-6"
+      }`}
     >
-      {/* Desktop Navigation */}
-      <ul className="hidden md:flex space-x-6 items-center justify-center">
-        {navItems.map((item) => (
-          <li key={item.id}>
-            <button
-              onClick={() => scrollToSection(item.id)}
-              className={`text-sm font-medium transition-all duration-300 px-3 py-1 rounded-full ${
-                activeSection === item.id
-                  ? "text-white bg-accent-cyan shadow-modern"
-                  : "text-secondary-gray hover:text-accent-cyan hover:bg-gray-800/50"
-              }`}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        <a href="#home" className="text-2xl font-black text-white tracking-tighter hover:text-accent-cyan transition-colors">
+          DP<span className="text-accent-purple">.</span>
+        </a>
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-secondary-gray hover:text-white transition-colors relative group"
             >
-              {item.label}
-            </button>
-          </li>
-        ))}
-      </ul>
-
-      {/* Mobile Header (Logo + Menu Button) */}
-      <div className="flex items-center justify-between md:hidden">
-        {/* Placeholder for left alignment */}
-        <div className="w-6" />
-
-        {/* Centered Logo */}
-        <div
-          className="text-white text-lg font-bold select-none cursor-pointer"
-          onClick={() => scrollToSection("home")}
-        >
-          <span className="text-accent-cyan">My</span> Portfolio
+              {link.name}
+              <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-purple to-accent-cyan group-hover:w-full transition-all duration-300" />
+            </a>
+          ))}
+          <a
+            href={navLinks[4].href}
+            className="px-5 py-2 text-sm font-semibold rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent-cyan transition-all text-white"
+          >
+            Hire Me
+          </a>
         </div>
 
-        {/* Menu Toggle on Right */}
+        {/* Mobile Nav Toggle */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="text-white focus:outline-none"
-          aria-label="Toggle Menu"
+          className="md:hidden text-white"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          {isMobileMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
-      <div
-        className={`absolute top-full left-0 w-full mt-2 bg-black/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-700/50 transition-all duration-300 overflow-hidden ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <ul className="flex flex-col items-center space-y-2 py-4">
-          {navItems.map((item) => (
-            <li key={item.id} className="w-full text-center">
-              <button
-                onClick={() => scrollToSection(item.id)}
-                className={`w-full py-2 text-sm font-medium transition-all duration-300 rounded-full ${
-                  activeSection === item.id
-                    ? "text-white bg-accent-cyan shadow-modern"
-                    : "text-secondary-gray hover:text-accent-cyan hover:bg-gray-800/50"
-                }`}
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-[#0a0a0c]/95 backdrop-blur-xl border-b border-gray-800 overflow-hidden"
+          >
+            <div className="flex flex-col px-4 py-6 gap-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-lg font-medium text-secondary-gray hover:text-white transition-colors block py-2 border-b border-gray-800/50"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
-};
-
-export default Navigation;
+}
