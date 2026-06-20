@@ -117,21 +117,21 @@ export const projectsData = [
     description: "A web app that compresses and optimizes images without noticeable quality loss. Supports multiple formats, drag-and-drop uploads, and instant downloads of the compressed files.",
     tech: ["React.js", "Next.js", "Tailwind CSS", "TypeScript"],
     image: "🖼️",
-    link: "#"
+    link: "https://image-compressor-delta-ten.vercel.app/"
   },
   {
     title: "EatoAI",
     description: "An AI-powered app that generates personalized recipes and meal suggestions based on available ingredients and dietary preferences.",
     tech: ["React.js", "Next.js", "Node.js", "Gemini API", "Tailwind CSS"],
     image: "🍽️",
-    link: "#"
+    link: "https://ai-recipee.vercel.app/"
   },
   {
     title: "EV Charging",
     description: "A full-stack platform to locate, book, and manage EV charging stations. Features real-time station availability, map-based search, and slot booking.",
     tech: ["React.js", "Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
     image: "⚡",
-    link: "#"
+    link: "https://ev--charging.vercel.app/"
   }
 ];
 
