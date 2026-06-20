@@ -23,7 +23,7 @@ export const aboutData = {
   skillCategories: [
     {
       title: "Languages",
-      skills: ["C", "C++", "JavaScript", "TypeScript"],
+      skills: ["C", "C++", "JavaScript", "TypeScript", "Python"],
     },
     {
       title: "Web Development",
@@ -44,7 +44,11 @@ export const aboutData = {
     },
     {
       title: "Databases & Cloud",
-      skills: ["MongoDB", "Mongoose", "Supabase", "Vercel"],
+      skills: ["MongoDB", "Mongoose", "SQL", "Supabase", "Vercel"],
+    },
+    {
+      title: "AI Tools I Use",
+      skills: ["Claude", "Gemini", "ChatGPT", "Antigravity"],
     },
     {
       title: "Relevant Coursework",
@@ -109,11 +113,25 @@ export const projectsData = [
     link: "https://online-store-beryl-phi.vercel.app/"
   },
   {
-    title: "AI Project Analyzer",
-    description: "A full-stack app that analyzes projects and provides insights. Users can log in (JWT auth) to create, save, categorize, and search their own private projects.",
-    tech: ["JavaScript", "React.js", "Next.js", "Tailwind CSS", "Gemini API", "Vercel", "Lucide React"],
-    image: "🗃️",
-    link: "https://project-analyzer-pi.vercel.app/"
+    title: "Image Compressor",
+    description: "A web app that compresses and optimizes images without noticeable quality loss. Supports multiple formats, drag-and-drop uploads, and instant downloads of the compressed files.",
+    tech: ["React.js", "Next.js", "Tailwind CSS", "TypeScript"],
+    image: "🖼️",
+    link: "#"
+  },
+  {
+    title: "EatoAI",
+    description: "An AI-powered app that generates personalized recipes and meal suggestions based on available ingredients and dietary preferences.",
+    tech: ["React.js", "Next.js", "Node.js", "Gemini API", "Tailwind CSS"],
+    image: "🍽️",
+    link: "#"
+  },
+  {
+    title: "EV Charging",
+    description: "A full-stack platform to locate, book, and manage EV charging stations. Features real-time station availability, map-based search, and slot booking.",
+    tech: ["React.js", "Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    image: "⚡",
+    link: "#"
   }
 ];
 
@@ -135,12 +153,20 @@ export const experienceData = [
     icon: "👟",
   },
   {
-    company: "Togeno (Internship)",
+    company: "Trodec (Internship)",
     role: "Frontend Developer",
     period: "Jan 2026 - Feb 2026",
     description: "Built a product catalog with smooth animations, and implemented a cart & checkout flow with server-side logic. Collaborated with the backend team to integrate the frontend with the backend.",
     tech: ["Next.js", "Node.js", "Framer-motion"],
     icon: "👟",
+  },
+  {
+    company: "Punchrakha (Freelance)",
+    role: "Full Stack Developer",
+    period: "Mar 2026 - Present",
+    description: "Currently building and maintaining a full-stack web solution for the client, handling responsive UI, server-side logic, and database integration with a focus on performance and clean UX.",
+    tech: ["Next.js", "Node.js", "Tailwind CSS", "MongoDB"],
+    icon: "💼",
   }
 ];
 
